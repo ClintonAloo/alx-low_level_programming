@@ -3,11 +3,11 @@
 
 
 /**
- * *    * main - print alphabet in lowercase
+ *    * main - print alphabet in lowercase
  *
- *  *       *
- *  *          *Return: zero
- *  */
+ *       *
+ *          *Return: zero
+ */
 int main(void)
 {
 	char ch = 'a';
