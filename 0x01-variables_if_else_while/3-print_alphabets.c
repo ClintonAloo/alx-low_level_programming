@@ -1,16 +1,10 @@
 #include <stdio.h>
 
-
-
 /**
- 
- *    * main - print alphabet in upper and lower
- 
- *    *
- 
- *    * Return: zero
- 
- */
+*    * main - print alphabet in upper and lower
+*    *
+*    * Return: zero
+*/
 
 int main(void)
 
