@@ -9,12 +9,13 @@ int main(void)
 	int a, b, z;
 
 	for (a = 48; a < 58; a++)
-	
 	{
-		for (z = 50; z < 58; z++)
+		for (b = 49; b < 58; b++)
 		{
-			if (z > b && b > a)
+			for (z = 50; z < 58; z++)
 			{
+				if (z > b && b > a)
+				{
 				putchar(a);
 				putchar(b);
 				putchar(z);
