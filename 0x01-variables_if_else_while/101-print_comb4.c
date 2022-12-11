@@ -16,15 +16,18 @@ int main(void)
 			{
 				if (z > b && b > a)
 				{
-				putchar(a);
-				putchar(b);
-				putchar(z);
-				if (a != 55 || b != 56)
-				{
-					putchar(',');
-					putchar(' ');
+					putchar(a);
+					putchar(b);
+					putchar(z);
+					if (a != 55 || b != 56)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 			}
 		}
 	}
+	putchar('\n');
+	return (0);
 }
