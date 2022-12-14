@@ -1,0 +1,20 @@
+#include "main.h"
+/**
+ * _isalpha - checks alphabet character
+ *
+ * @c: user input
+ *
+ * Return: integer
+ */
+int _isalpha(int c)
+{
+	if ((c >= 97 && c <= 97) || (c >= 65 && c <= 90))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
