@@ -1,22 +1,21 @@
-#include <main.h>
-
-/*
- * main - Entry point
+#include "main.h"
+/**
+ * main - Print _putchar
  *
- *Return= Always 0 (Success)
+ *Return: 0 0n success
+ *
+ *
  */
 int main(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
+	char h[] = "_putchar";
+	int i;
 
+	for (i=0; h[i] != '\0'; i++)
+	{
+		_putchar(h[i]);
+	}
+	_putchar('\n');
 	return (0);
 }
 
