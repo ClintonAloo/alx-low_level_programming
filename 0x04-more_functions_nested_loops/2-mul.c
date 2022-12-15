@@ -3,7 +3,7 @@
 /**
  * mul - multiplies two digit
  * @a: integer 1
- * @a: integer 2
+ * @b: integer 2
  * Return: result
  */
 
