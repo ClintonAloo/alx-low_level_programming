@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_square - Draws square on terminal
- * @size: Argument (Integer size of square)
- */
+* print_square - Draws square on terminal
+* @size: Argument (Integer size of square)
+*/
 
 void print_square(int size)
 {
