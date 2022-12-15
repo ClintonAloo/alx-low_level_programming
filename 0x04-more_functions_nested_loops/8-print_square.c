@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
-* print_square - Draws square on terminal
-* @size: Argument (Integer size of square)
-*/
-
+ * print_square - Draws square on terminal
+ * @size: Argument (Integer size of square)
+ */
 void print_square(int size)
 {
 	int i, j;
@@ -13,7 +12,7 @@ void print_square(int size)
 	{
 		for (i = 0; i < size; i++)
 			_putchar('#');
-		putchar('\n');
+		_putchar('\n');
 	}
 	if (size <= 0)
 		_putchar('\n');
