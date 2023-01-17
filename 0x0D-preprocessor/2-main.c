@@ -2,7 +2,7 @@
 
 /**
  * main - prints the name of file its compiled
- * 			from
+ *				from
  * Return: 0 (success)
  */
 
