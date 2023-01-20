@@ -1,12 +1,15 @@
-#include <stdarg.h>
+i#include <stdarg.h>
 #include "variadic_functions.h"
 
 /**
- * print_all - prints anything.
- * @c: character to be printed
- * @i: integer to be printed
- * @f: float to be printed
- * @s: string to be printed
+ * print_all - prints anything according to the format string passed
+ * @format: format string that specifies the types of
+ *			arguments passed to the function
+ * c: char
+ * i: integer
+ * f: float
+ * s: char * (if the string is NULL, print (nil) instead
+ *		any other char should be ignored
  *
  * Return: Nothing
  */
