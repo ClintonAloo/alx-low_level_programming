@@ -2,7 +2,7 @@
 
 /**
  * print_strings - prints string, followed
- * 			by newline
+ *			by newline
  * @separator: separator string
  * @n: number of strings
  *
