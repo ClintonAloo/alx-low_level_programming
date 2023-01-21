@@ -2,119 +2,72 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-void print_char(va_list arg);
-void print_int(va_list arg);
-void print_float(va_list arg);
-void print_string(va_list arg);
-void print_all(const char * const format, ...);
-
 /**
- * print_char - prints a char
- * @arg: a list of arguments pointing to the character
- */
+ *
+ *  * _strlen - checks length of a string
+ *
+ *   * @str: the string
+ *
+ *    * Return: returns the length of the string
+ *
+ *     */
 
-void print_char(va_list arg)
+unsigned int _strlen(const char * const str)
 {
-	char letter;
+	unsigned int len;
 
-	letter = va_arg(arg, int);
-	printf("%c", letter);
+	len = 0;
+	while (str[len] != '\0' && str != NULL)
+		len++;
+	return (len);
 }
-
 /**
- * print_int - prints an int
- * @arg: a list of arguments pointing to the character
+ *
+ * print_all - prints anything
+ *
+ * @format: data type
+ *
  */
 
-void print_char(va_list arg)
-{
-	char letter;
-
-	letter = va_arg(arg, int);
-	printf("%c", letter);
-}
-
-/**
- * print_int - prints an int
- * @arg: A list of arguments pointing to the integer
- */
-
-void print_int(va_list arg)
-{
-	int num;
-
-	num = va_arg(arg, int);
-	printf("%d", num);
-}
-
-/**
- * print_float - prints a float
- * @arg: a list arguments pointing to a float
- */
-
-void print_float(va_list arg)
-{
-	float num;
-
-	num = va_arg(arg, double);
-	printf("%f", num);
-}
-
-/**
- * print_string - prints string
- * @arg: a list of arguments pointing to string
- */
-
-void print_string(va_list arg)
-{
-	char *str;
-
-	str = va_arg(arg, char *);
-
-	if (str == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-	printf("%s", str);
-}
-
-/**
- * print_all - prints anything followed by new line
- * @format: a string of character representing the arguments
- * Description: any charcter is ignored if string is NULL,(nil) is printed
- */
 void print_all(const char * const format, ...)
 {
+	unsigned int i, n;
 	va_list args;
-	int i = 0, j = 0;
-	char *separator = "";
-	printer_t funcs[] = {
-		{"c", print_char},
-		{"i", print_int},
-		{"f", print_float},
-		{"s", print_string}
-	};
+	char *s;
 
+	n = _strlen(format);
 	va_start(args, format);
-
-	while (format && (*(format + i)))
+	i = 0;
+	while (format != NULL && i < n)
 	{
-		j = 0;
-	
-		while (j < 4 && (*(format + i) != *(funcs[j].symbol)))
-			j++;
-		if (j < 4)
+		switch (format[i])
 		{
-			printf("%s", separator);
-			funcs[j].print(args);
-			separator = ", ";
+			case 'c':
+				printf("%c", va_arg(args, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(args, int));
+				break;
+			case 'f':
+				printf("%f", va_arg(args, double));
+				break;
+			case 's':
+				s = va_arg(args, char*);
+				if (s == NULL)
+				{
+					printf("(nil)");
+					break;
+				}
+				printf("%s", s);
+				break;
+			default:
+				i++;
+				continue;
 		}
-	
+		if (i < n - 1)
+			printf(", ");
 		i++;
 	}
-
 	printf("\n");
-
 	va_end(args);
 }
