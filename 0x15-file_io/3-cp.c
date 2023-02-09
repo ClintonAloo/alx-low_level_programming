@@ -24,7 +24,7 @@ int cp_file(char *file_from, char *file_to)
 		rd = read(ff, buffer, 1024);
 		if (rd == -1)
 			return (98);
-	
+
 		wr = write(ft, buffer, rd);
 		if (wr == -1)
 			return (99);
